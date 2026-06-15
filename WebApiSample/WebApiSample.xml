@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiSample</name>
+    </assembly>
+    <members>
+        <member name="M:WebApiSample.Controllers.StudentController.Get(System.Int32)">
+            <summary>
+            دریافت جزئیات
+            </summary>
+            <param name="id">آیدی دانش آموز</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiSample.Controllers.StudentController.Delete(System.Int32)">
+            <summary>
+            حذف
+            </summary>
+            <param name="id">شماره دانش آموز</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
