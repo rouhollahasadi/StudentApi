@@ -18,5 +18,18 @@
             <param name="id">شماره دانش آموز</param>
             <returns></returns>
         </member>
+        <member name="M:WebApiSample.Controllers.TokenController.GenerateToken(WebApiSample.Controllers.LoginRequest)">
+            <summary>
+            دریافت توکن JWT
+            </summary>
+            <param name="username">نام کاربری</param>
+            <param name="password">رمز عبور</param>
+            <returns>توکن JWT</returns>
+        </member>
+        <member name="M:WebApiSample.Controllers.TokenController.ValidateToken">
+            <summary>
+            اعتبارسنجی توکن
+            </summary>
+        </member>
     </members>
 </doc>
