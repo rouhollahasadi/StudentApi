@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApiSample.Models;
 using WebApiSample.Models.Repository;
 using WebApiSample.Models.ViewModels;
@@ -9,6 +10,7 @@ namespace WebApiSample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize] // احراز هویت برای همه اکشن‌ها
     public class StudentController : ControllerBase
     {
         private readonly StudentRepository _studentRepository;
@@ -24,6 +26,15 @@ namespace WebApiSample.Controllers
             var result = _studentRepository.GetAll();
             return Ok(result);
         }
+
+        [HttpGet("public")]
+        [AllowAnonymous] // این متد نیازی به توکن ندارد
+        public IActionResult PublicEndpoint()
+        {
+            return Ok(new { message = "This is public - no token needed!" });
+        }
+
+
 
         /// <summary>
         /// دریافت جزئیات
